@@ -3,6 +3,7 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver import ActionChains
+from selenium.webdriver.support import expected_conditions as EC
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import os, time
 import datetime
@@ -91,7 +92,7 @@ def stack_overflow_attendance():
         print("stack_overflow_attendance exception:", error)
 
 
-schedule.every().day.at("06:45").do(stack_overflow_attendance)
+schedule.every().day.at("12:00").do(stack_overflow_attendance)
 
 
 while 1:
